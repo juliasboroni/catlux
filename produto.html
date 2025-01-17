@@ -1,0 +1,129 @@
+		<!DOCTYPE html>
+<html>
+<head>
+<title>CatLux</title>
+<link	rel="stylesheet" href="css/estilo.css">
+<meta	charset="utf-8">
+</head>
+					<body>
+					<header	class="container">
+			<h1>
+					<img	src="fotos/catlux.jpg" alt="CatLux">
+			</h1>
+			
+			<p	class="sacola">
+					Nenhum	item	na	sacola	de	compras
+							
+			</p>
+			<nav	class="menu-opcoes">
+					<ul>
+					                <li><input	type="image" src="img/busca.png">
+									<li><a	href="#">Sua	Conta</a></li>
+									<li><a	href="pf.html">FAQ</a></li>
+									<li><a	href="sobre.html">Sobre</a></li>
+									<li><a	href="https://www.bing.com/ck/a?!&&p=b0bfa7a037c8df467479a1f1bae905b4ad34d23a3de5632d8cf626033545a8beJmltdHM9MTczMzk2MTYwMA&ptn=3&ver=2&hsh=4&fclid=05223a91-4637-6452-0fce-2fa447b165bf&psq=whatsapp+web&u=a1aHR0cHM6Ly93ZWIud2hhdHNhcHAuY29tLw&ntb=1">Ajuda</a></li>
+					</ul>
+			</nav>
+			</header>
+<link	rel="stylesheet"	href="css/produto.css">
+						<div	class="container">			
+						<div	class="produto">
+			<h1>Moletom</h1>
+			<p>por	apenas	R$	139,90</p>
+		<form	action="checkout.html" method="POST">
+<input	type="hidden" name="nome" value="Moletom">
+<input	type="hidden" name="preco" value="139,90">
+
+							<fieldset	class="cores">
+											<legend>Escolha	a	cor:</legend>
+											<input	type="radio" name="cor" value="rosa" id="rosa" checked>
+											<label	for="rosa">
+													<img	src="fotos/moletom-rosa.webp" alt="rosa">
+											</label>
+										
+											<input	type="radio" name="cor" value="azul" id="azul">
+											<label	for="azul">
+													<img	src="fotos/moletom-azul.webp" alt="azul">
+											</label>
+							</fieldset>
+							<fieldset class="tamanhos">
+    <legend>Escolha o tamanho:</legend>
+    <input type="range" min="1" max="4" value="2" step="1" name="tamanho" id="tamanho">
+    <output for="tamanho" name="valortamanho">M</output>
+</fieldset>
+
+							<input	type="submit" class="comprar" value="Comprar">
+			</form>
+		
+</div>	
+		<div	class="detalhes">
+		<h2>Detalhes	do	produto</h2>
+									<p>Esse	é	o	melhor	moletom que	você	já	viu.	Excelente
+									material	italiano.	Compre	já	e	receba	hoje
+									mesmo	pela	nossa	entrega	a	jato.</p>
+									<table>
+					<thead>
+									<tr>
+													<th>Característica</th>
+													<th>Detalhe</th>
+									</tr>
+					</thead>
+					<tbody>
+									<tr>
+													<td>Modelo</td>
+													<td>Moletom	7845</td>
+									</tr>
+									<tr>
+													<td>Material</td>
+													<td>Algodão	e	poliester</td>
+									</tr>
+									<tr>
+													<td>Cores</td>
+													<td>Azul e Rosa	</td>
+									</tr>
+									<tr>
+													<td>Lavagem</td>
+													<td>Lavar	a	mão</td>
+									</tr>
+					</tbody>
+</table>
+					</div>	
+</div>	
+									
+									
+									
+									
+									
+									
+									<footer>
+					<div	class="container">
+							<img	src="fotos/rodape.jpg" alt="Logo	CatLux">
+							<ul	class="social">
+									<li><a	href="http://facebook.com/mirrorfashion">Facebook</a></li>
+									<li><a	href="http://twitter.com/mirrorfashion">Twitter</a></li>
+									<li><a	href="http://plus.google.com/mirrorfashion">Google+</a></li>
+							</ul>
+				</div>
+			</footer>
+<script>
+var	inputTamanho	=	document.querySelector('[name=tamanho]')
+var	outputTamanho	=	document.querySelector('[name=valortamanho]')
+function	mostraTamanho(){
+			outputTamanho.value	=	inputTamanho.value
+			outputTamanho.textContent	=	event.target.value
+}
+inputTamanho.oninput	=	mostraTamanho
+	</script>
+	<script>
+  const tamanhoInput = document.getElementById('tamanho');
+  const tamanhoOutput = document.querySelector('output[name="valortamanho"]');
+  
+  // Mapeando os valores numéricos para os tamanhos de roupa
+  const tamanhos = ["P", "M", "G", "GG"];
+  
+  // Atualizando o valor do output de acordo com o valor selecionado
+  tamanhoInput.addEventListener('input', function() {
+    tamanhoOutput.textContent = tamanhos[tamanhoInput.value - 1]; // Ajustando o índice para 0-based
+  });
+</script>
+					</body>
